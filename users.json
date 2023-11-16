@@ -1,0 +1,33 @@
+{
+  "users" : [ {
+    "username" : "test",
+    "password" : "test",
+    "id" : "0",
+    "authLevel" : 0
+  }, {
+    "username" : "user",
+    "password" : "user",
+    "id" : "qprwKOU4Yx",
+    "authLevel" : 0
+  }, {
+    "username" : "admin",
+    "password" : "admin",
+    "id" : "f4scXCaMio",
+    "authLevel" : 1
+  }, {
+    "username" : "newUser",
+    "password" : "newUser",
+    "id" : "ZkeXMaK1IM",
+    "authLevel" : 0
+  }, {
+    "username" : "newAdmin",
+    "password" : "newAdmin",
+    "id" : "CXeNQ1As3j",
+    "authLevel" : 1
+  }, {
+    "username" : "anotherUser",
+    "password" : "anotherUser",
+    "id" : "cfRxjXcJpR",
+    "authLevel" : 0
+  } ]
+}
