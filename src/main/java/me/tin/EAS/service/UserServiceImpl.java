@@ -1,10 +1,13 @@
 package me.tin.EAS.service;
 
+import me.tin.EAS.model.Post;
+import me.tin.EAS.model.Posts;
 import me.tin.EAS.model.User;
 import me.tin.EAS.model.Users;
 import me.tin.EAS.util.Utility;
 import org.springframework.stereotype.Service;
 
+import java.util.Base64;
 import java.util.List;
 
 @Service
@@ -26,6 +29,29 @@ public class UserServiceImpl implements UserService {
         }
 
         return null;
+    }
+
+    @Override
+    public void deleteUser(String id) {
+        Users users = new Users();
+
+        Users fetchedUsers = Utility.loadFromJsonFile("users.json", Users.class);
+        if(fetchedUsers != null && fetchedUsers.getUsers() != null)
+            users.setUsers(fetchedUsers.getUsers());
+
+        for(User user : users.getUsers()) {
+            if(user.getId().equals(id)) {
+                users.getUsers().remove(user);
+                break;
+            }
+        }
+
+        Utility.saveToJsonFile(users, "users.json");
+    }
+
+    @Override
+    public Users getAllUsers(){
+        return Utility.loadFromJsonFile("users.json", Users.class);
     }
 
     @Override

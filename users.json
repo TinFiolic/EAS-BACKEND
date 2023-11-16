@@ -1,20 +1,5 @@
 {
   "users" : [ {
-    "username" : "test",
-    "password" : "test",
-    "id" : "0",
-    "authLevel" : 0
-  }, {
-    "username" : "user",
-    "password" : "user",
-    "id" : "qprwKOU4Yx",
-    "authLevel" : 0
-  }, {
-    "username" : "admin",
-    "password" : "admin",
-    "id" : "f4scXCaMio",
-    "authLevel" : 1
-  }, {
     "username" : "newUser",
     "password" : "newUser",
     "id" : "ZkeXMaK1IM",

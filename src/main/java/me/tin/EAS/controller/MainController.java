@@ -3,6 +3,7 @@ package me.tin.EAS.controller;
 import me.tin.EAS.model.Post;
 import me.tin.EAS.model.Posts;
 import me.tin.EAS.model.User;
+import me.tin.EAS.model.Users;
 import me.tin.EAS.model.dto.LoginDTO;
 import me.tin.EAS.model.dto.RegisterDTO;
 import me.tin.EAS.model.dto.UploadDTO;
@@ -52,6 +53,11 @@ public class MainController {
         return new ResponseEntity<>(postService.getAllPosts(), HttpStatus.OK);
     }
 
+    @GetMapping (value = "/all-users")
+    public ResponseEntity<Users> getUsers() {
+        return new ResponseEntity<>(userService.getAllUsers(), HttpStatus.OK);
+    }
+
     @PostMapping (value = "/new-post")
     public ResponseEntity<Post> createPost(@RequestParam String title,
                                            @RequestParam String description,
@@ -71,6 +77,11 @@ public class MainController {
     @PostMapping (value = "/delete")
     public void deletePost(@RequestParam String id) {
         postService.deletePost(Integer.parseInt(id));
+    }
+
+    @PostMapping (value = "/user-delete")
+    public void deleteUser(@RequestParam String id) {
+        userService.deleteUser(id);
     }
 
     @PostMapping (value = "/edit-post")

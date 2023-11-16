@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class PostServiceImpl implements PostService{
     @Override
-    public Posts getAllPosts(){
+    public Posts getAllPosts() {
         return Utility.loadFromJsonFile("posts.json", Posts.class);
     }
 
